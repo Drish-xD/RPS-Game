@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body oncontextmenu="return true">
+    <nav>
+        <h1>navbar</h1>
+    </nav>
+
+    <main>
+        <div class="wrapper">
+            
+            <div class="title">
+                <h1>Game</h1>
+            </div>
+            
+            <div class="container">
+                <div class="box user"></div>
+                <div class="box bot"></div>
+                
+                <div class="hand"  onclick="rpsgame('rock')">
+                    <span class="iconify" data-icon="la:hand-rock"></span>
+                </div>
+                <div class="hand" onclick="rpsgame('paper')">
+                    <span class="iconify" data-icon="la:hand-paper"></span>
+                </div>
+                <div class="hand" onclick="rpsgame('scissors')">
+                    <span class="iconify" data-icon="la:hand-scissors"></span>
+                </div>
+            </div>
+
+            <div class="result" id="result">Choose your move</div>
+    
+            <div class="score" id="score">
+                <div class="score-box user-score">USER:  0</div>
+                <div class="score-box bot-score">COMPUTER: 0</div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

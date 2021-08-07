@@ -2,42 +2,54 @@ let userscore = 0;
 let botscore = 0;
 const result = document.querySelector("#result")
 const score = document.querySelector("#score")
+const userbox = document.querySelector("#user")
+const botbox = document.querySelector("#bot")
 
 // comparing the choices using conditions 
 
 function compare(choice1, choice2) {
     if (choice1 === choice2) {
+        userbox.innerHTML = `<span class="iconify" data-icon="la:hand-rock"></span>`;
+        botbox.innerHTML = `<span class="iconify" data-icon="la:hand-rock"></span>`;
         return "Its a tie!!!";
     }
 
     else if (choice1 === "rock") {
+        userbox.innerHTML = `<span class="iconify" data-icon="la:hand-rock"></span>`;
         if (choice2 === "paper"){
-            botscore++;
+            botbox.innerHTML = `<span class="iconify" data-icon="la:hand-paper"></span>`;
+            botscore++;     
             return "Bot";
         }
         else if (choice2 === "scissors"){
+            botbox.innerHTML = `<span class="iconify" data-icon="la:hand-scissors"></span>`;
             userscore++;
             return "User";
         }
     }
 
     else if (choice1 === "paper") {
+        userbox.innerHTML = `<span class="iconify" data-icon="la:hand-paper"></span>`;
         if (choice2 === "scissors"){
+            botbox.innerHTML = `<span class="iconify" data-icon="la:hand-scissors"></span>`;
             botscore++;
             return "Bot";
         }
         else if (choice2 === "rock"){
+            botbox.innerHTML = `<span class="iconify" data-icon="la:hand-rock"></span>`;
             userscore++;
             return "User";
         }
     }
 
     else if (choice1 === "scissors") {
+        userbox.innerHTML = `<span class="iconify" data-icon="la:hand-scissors"></span>`;
         if (choice2 === "rock"){
             botscore++;
             return "Bot";
         }
         else if (choice2 === "paper"){
+            botbox.innerHTML = `<span class="iconify" data-icon="la:hand-paper"></span>`;
             userscore++;
             return "User";
         }
@@ -48,9 +60,6 @@ function rpsgame(choice) {
     let userchoice = choice;
     let botchoice = ["rock", "paper", "scissors"][Math.floor(Math.random()*3)]
     let winner = compare(userchoice, botchoice);
-    console.log(winner)
-    console.log(userscore)
-    console.log(botscore)
     result.classList = "result";
 
     if (winner === "User") {

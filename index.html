@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Style/style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body oncontextmenu="return true">
+    <div id="particles-js"></div>
     <nav>
         <h1>navbar</h1>
     </nav>
@@ -16,13 +17,21 @@
         <div class="wrapper">
             
             <div class="title">
-                <h1>Game</h1>
+                <h1>Rock, Paper & Scissors</h1>
             </div>
-            
+
             <div class="container">
-                <div class="box user"></div>
-                <div class="box bot"></div>
-                
+                <div class="boxes">
+                    <h2>User</h2>
+                    <div class="box" id="user"></div>
+                </div>
+                <div class="boxes">
+                    <h2>Bot</h2>
+                    <div class="box" id="bot"></div>
+                </div>
+
+            </div>
+            <div class="container">                
                 <div class="hand"  onclick="rpsgame('rock')">
                     <span class="iconify" data-icon="la:hand-rock"></span>
                 </div>
@@ -45,6 +54,13 @@
     </main>
 
     <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
-    <script src="script.js"></script>
+    <script src="Script/particles.min.js"></script>
+    <script src="Script/script.js"></script>
+    <script>
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', 'Script/config.json', function() {
+    console.log('callback - particles.js config loaded');
+    });
+    </script>
 </body>
 </html>

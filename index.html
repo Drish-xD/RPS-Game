@@ -1,66 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style/style.css">
-    <title>Rock Paper Scissors</title>
-</head>
-<body oncontextmenu="return true">
-    <div id="particles-js"></div>
-    <nav>
-        <h1>navbar</h1>
-    </nav>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="Style/style.css" />
+		<link rel="shortcut icon" href="Assets/logo.png" type="image/x-icon" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<title>Rock Paper Scissors</title>
+	</head>
 
-    <main>
-        <div class="wrapper">
-            
-            <div class="title">
-                <h1>Rock, Paper & Scissors</h1>
-            </div>
+	<body oncontextmenu="return true">
+		<div id="particles-js"></div>
 
-            <div class="container">
-                <div class="boxes">
-                    <h2>User</h2>
-                    <div class="box" id="user"></div>
-                </div>
-                <div class="boxes">
-                    <h2>Bot</h2>
-                    <div class="box" id="bot"></div>
-                </div>
+		<!-- navbar -->
 
-            </div>
-            <div class="container">                
-                <div class="hand"  onclick="rpsgame('rock')">
-                    <span class="iconify" data-icon="la:hand-rock"></span>
-                </div>
-                <div class="hand" onclick="rpsgame('paper')">
-                    <span class="iconify" data-icon="la:hand-paper"></span>
-                </div>
-                <div class="hand" onclick="rpsgame('scissors')">
-                    <span class="iconify" data-icon="la:hand-scissors"></span>
-                </div>
-            </div>
+		<nav class="nav-bar">
+			<div class="menu-bar">
+				<div class="menu-icon">
+					<div class="wrapper-menu">
+						<div class="line-menu half start"></div>
+						<div class="line-menu"></div>
+						<div class="line-menu half end"></div>
+					</div>
+				</div>
+			</div>
 
-            <div class="result" id="result">Choose your move</div>
-    
-            <div class="score" id="score">
-                <div class="score-box user-score">USER:  0</div>
-                <div class="score-box bot-score">COMPUTER: 0</div>
-            </div>
+			<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+			</div>
 
-        </div>
-    </main>
+			<div class="menu">
+				<ul>
+					<li><a href="https://drish-xd.github.io">Home</a></li>
+					<li>
+						<a href="https://drish-xd.github.io/Portfolio#About-me">About</a>
+					</li>
+					<li>
+						<a href="https://drish-xd.github.io/Portfolio#Skills">Skill</a>
+					</li>
+					<li>
+						<a href="https://drish-xd.github.io/Portfolio#Contacts">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-    <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
-    <script src="Script/particles.min.js"></script>
-    <script src="Script/script.js"></script>
-    <script>
-    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-    particlesJS.load('particles-js', 'Script/config.json', function() {
-    console.log('callback - particles.js config loaded');
-    });
-    </script>
-</body>
+		<main>
+			<div class="wrapper">
+				<div class="title">
+					<h1>Rock, Paper & Scissors</h1>
+				</div>
+
+				<div class="container">
+					<div class="boxes">
+						<h2>User</h2>
+						<div class="box" id="user"></div>
+					</div>
+					<div class="boxes">
+						<h2>Bot</h2>
+						<div class="box" id="bot"></div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="hand" onclick="rpsgame('rock')">
+						<span class="iconify" data-icon="la:hand-rock"></span>
+					</div>
+					<div class="hand" onclick="rpsgame('paper')">
+						<span class="iconify" data-icon="la:hand-paper"></span>
+					</div>
+					<div class="hand" onclick="rpsgame('scissors')">
+						<span class="iconify" data-icon="la:hand-scissors"></span>
+					</div>
+				</div>
+
+				<div class="result" id="result">Choose your move</div>
+
+				<div class="score" id="score">
+					<div class="score-box user-score">USER: 0</div>
+					<div class="score-box bot-score">COMPUTER: 0</div>
+				</div>
+			</div>
+			<footer class="foot">
+				<h4>&copy; Copyrights 2021 by Drish. All Rights Reserved.</h4>
+			</footer>
+		</main>
+
+		<script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
+		<script src="Script/particles.min.js"></script>
+		<script src="Script/script.js"></script>
+	</body>
 </html>

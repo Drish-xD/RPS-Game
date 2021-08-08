@@ -10,7 +10,7 @@ You can play Rock, Paper and Scissors with a Bot /Computer.
 
 ### Screenshot 🖥
 
-![Screenshot]( "Screenshot")
+![Screenshot](https://github.com/Drish-xD/RPS-Game/blob/master/Assets/Screenshot.png "Screenshot")
 
 [JavaScript]: https://www.javascript.com/
 [website]: https://drish-xd.is-a.dev/RPS-Game/

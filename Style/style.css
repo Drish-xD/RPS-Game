@@ -171,6 +171,43 @@ nav ul li a {
 	display: none;
 }
 
+@media screen and (max-width: 786px) {
+	body {
+	  background-color: #0e0e0e;
+	}
+  
+	nav ul {
+	  max-height: 0;
+	  background: rgba(0, 0, 0, 0.9);
+	}
+  
+	nav ul li a {
+	  font-size: 22px;
+	  font-weight: 800;
+	  letter-spacing: 0.15rem;
+	}
+  
+	nav ul li {
+	  box-sizing: border-box;
+	  width: 100%;
+	  padding: 18px;
+	  text-align: center;
+	}
+  
+	.showing {
+	  max-height: 30em;
+	}
+  
+	.menu-bar {
+	  display: block;
+	}
+  
+	.menu-icon {
+	  display: block;
+	  font-size: 30px;
+	}
+  }
+
 #particles-js {
 	position: absolute;
 	width: 100%;

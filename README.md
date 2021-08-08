@@ -5,6 +5,7 @@ Rock, Paper and Scissors is a game witten in [JavaScript].
 You can play Rock, Paper and Scissors with a Bot /Computer. 
 <br>
 <p style="Text-align: center">User 🧠 V/s Computer 🤖</p>
+
 ### **Check it out [🔗Link][website] :octocat:**
 
 ### Screenshot 🖥

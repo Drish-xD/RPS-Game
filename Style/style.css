@@ -19,10 +19,17 @@ body {
 	user-select: none;
 }
 
+#particles-js {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
 /* Navigation bar */
 
 nav {
-	position: relative;
+	position: fixed;
 	width: 100%;
 	line-height: 6vh;
 	z-index: 2;
@@ -45,10 +52,11 @@ nav ul li {
 nav ul li a {
 	text-decoration: none;
 	font-family: "Syne", sans-serif;
-	color: #f0f8ff;
+	color: #f8f8f8;
 	font-size: 21px;
 	font-weight: 800;
 	letter-spacing: 0.15rem;
+	cursor: pointer;
 }
 
 .spinner {
@@ -133,7 +141,7 @@ nav ul li a {
 }
 
 .line-menu {
-	background-color: #fafafa;
+	background-color: #ffffff;
 	border-radius: 25px;
 	width: 100%;
 	height: 3px;
@@ -167,52 +175,8 @@ nav ul li a {
 	width: 100%;
 	background: rgba(0, 0, 0, 0.9);
 	box-sizing: border-box;
-	color: #f0f8ff;
+	color: #f8f8f8;
 	display: none;
-}
-
-@media screen and (max-width: 786px) {
-	body {
-	  background-color: #0e0e0e;
-	}
-  
-	nav ul {
-	  max-height: 0;
-	  background: rgba(0, 0, 0, 0.9);
-	}
-  
-	nav ul li a {
-	  font-size: 22px;
-	  font-weight: 800;
-	  letter-spacing: 0.15rem;
-	}
-  
-	nav ul li {
-	  box-sizing: border-box;
-	  width: 100%;
-	  padding: 18px;
-	  text-align: center;
-	}
-  
-	.showing {
-	  max-height: 30em;
-	}
-  
-	.menu-bar {
-	  display: block;
-	}
-  
-	.menu-icon {
-	  display: block;
-	  font-size: 30px;
-	}
-  }
-
-#particles-js {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
 }
 
 main {
@@ -222,9 +186,8 @@ main {
 }
 
 .wrapper {
-	margin: auto;
+	margin: 10vh auto 60px auto;
 	width: 60vw;
-	margin-bottom: 50px;
 }
 
 .title {
@@ -251,6 +214,10 @@ main {
 	margin: 10px 50px;
 	font: 600 15px "Syne";
 	letter-spacing: 0.2rem;
+}
+
+.boxes h2 {
+	padding: 10px;
 }
 
 .box {
@@ -290,14 +257,7 @@ main {
 	color: #0c0c0c;
 }
 
-@media (max-width: 700px) {
-	.hand {
-		width: 80px;
-		height: 80px;
-	}
-}
-
-.iconify {
+.hand .iconify {
 	font-size: 50px;
 }
 
@@ -306,7 +266,6 @@ main {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	margin: 15px 0;
 	font: 600 17px "Syne";
 	letter-spacing: 0.1em;
 }
@@ -329,6 +288,7 @@ main {
 	padding: 20px;
 	font: 600 22px "Syne";
 	letter-spacing: 0.1em;
+	margin: 15px 0 ;
 }
 
 footer {
@@ -346,4 +306,156 @@ footer h4 {
 	color: #fafafa;
 	text-align: center;
 	padding: 10px 0;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1150px) {
+	nav ul li a {
+		font-size: 20px;
+	}
+}
+
+
+@media screen and (max-width: 786px) {
+	body {
+		background-color: #0e0e0e;
+	}
+
+	/* drop down nav-bar */
+
+	nav ul {
+		max-height: 0;
+		background: rgba(0, 0, 0, 0.9);
+	}
+
+	nav ul li a {
+		font-size: 22px;
+		font-weight: 800;
+		letter-spacing: 0.15rem;
+	}
+
+	nav ul li {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 18px;
+		text-align: center;
+	}
+
+	.showing {
+		max-height: 30em;
+	}
+
+	.menu-bar {
+		display: block;
+	}
+
+	.menu-icon {
+		display: block;
+		font-size: 30px;
+	}
+
+	/* main */
+
+	.wrapper {
+		width: 70vw;
+	}
+
+	.title {
+		font: 600 25px "Syne";
+		letter-spacing: 0.8mm;
+	}
+
+	.boxes {
+		font: 600 12px "Syne";
+	}
+
+	.box {
+		width: 180px;
+		height: 180px;
+	}
+
+	.box .iconify {
+		font-size: 180px;
+	}
+
+	.hand {
+		width: 75px;
+		height: 75px;
+	}
+
+	.hand .iconify {
+		font-size: 40px;
+	}
+
+	.result {
+		padding: 15px;
+		font: 600 20px "Syne";
+	}
+
+	.score {
+		font: 600 13px "Syne";
+	}
+
+	footer h4 {
+		font: 12px "Dosis", sans-serif;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	nav ul li a {
+		font-size: 20px;
+	}
+
+	.wrapper {
+		width: 100vw;
+	}
+
+	.title {
+		font: 600 20px "Syne";
+	}
+
+	.boxes {
+		margin: 10px 20px;
+	}
+
+	.box {
+		width: 140px;
+		height: 140px;
+	}
+
+	.box .iconify {
+		font-size: 140px;
+	}
+
+	.hand {
+		width: 60px;
+		height: 60px;
+	}
+
+	.hand .iconify {
+		font-size: 35px;
+	}
+
+	.result {
+		padding: 12px;
+		font: 600 17px "Syne";
+		margin: 15px 30px;
+	}
+
+	.score {
+		font: 600 11px "Syne";
+		margin: 0 30px;
+	}
+
+	footer h4 {
+		font: 11px "Dosis", sans-serif;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.box {
+		width: 130px;
+		height: 130px;
+	}
 }

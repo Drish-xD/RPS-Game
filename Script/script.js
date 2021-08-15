@@ -32,6 +32,8 @@ $(document).ready(function () {
 	});
 });
 
+// Game 
+
 let userscore = 0;
 let botscore = 0;
 const result = document.querySelector("#result");
